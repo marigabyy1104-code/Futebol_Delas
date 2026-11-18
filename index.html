@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Futebol Delas – Valorizando o futebol feminino</title>
+<meta name="description" content="Portal informativo sobre a história, as jogadoras e as conquistas do futebol feminino.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+  <a class="logo" href="#inicio">FUTEBOL <b>DELAS</b></a>
+  <button class="menu-btn" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  <nav id="menu">
+    <a href="#historia">História</a>
+    <a href="#jogadoras">Jogadoras</a>
+    <a href="#clubes">Clubes</a>
+    <a href="#base">Base</a>
+    <a href="#curiosidades">Curiosidades</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <div class="hero-txt">
+    <p class="selo">Portal informativo</p>
+    <h1>O futebol também é <span>delas!</span></h1>
+    <p>O futebol feminino mostra que talento não tem gênero. Ele inspira meninas a ocupar o espaço que quiserem, move torcidas e ajuda a construir um esporte mais igual. Valorizar essa história é abrir caminho para as próximas gerações.</p>
+    <p class="slogan">Mais que um esporte, uma conquista de todas!</p>
+    <a class="botao" href="#historia">Explorar o conteúdo</a>
+  </div>
+  <div class="camisa" aria-hidden="true"><span>10</span></div>
+</section>
+
+<section class="atalhos">
+  <a href="#historia"><h3>História</h3><p>A evolução do futebol feminino.</p></a>
+  <a href="#jogadoras"><h3>Jogadoras</h3><p>Conheça atletas e suas histórias.</p></a>
+  <a href="#curiosidades"><h3>Conquistas</h3><p>Grandes momentos do esporte.</p></a>
+  <a href="#quiz"><h3>Quiz</h3><p>Teste o que você sabe.</p></a>
+</section>
+
+<section id="historia" class="bloco">
+  <h2>História do futebol feminino</h2>
+  <p class="intro">Por décadas, mulheres foram impedidas de jogar. Clique em um ano para ver o que aconteceu.</p>
+  <div class="linha" id="linha"></div>
+  <article class="evento" id="evento" aria-live="polite"></article>
+</section>
+
+<section id="jogadoras" class="bloco escuro">
+  <h2>Mulheres que fizeram história</h2>
+  <p class="intro">Brasileiras e estrangeiras que mudaram o jogo dentro e fora de campo. Clique em "Conheça a história" para ver a biografia completa.</p>
+  <div class="filtros" id="filtros">
+    <button data-f="Todas" aria-pressed="true">Todas</button>
+    <button data-f="Brasil" aria-pressed="false">Brasil</button>
+    <button data-f="Internacional" aria-pressed="false">Internacional</button>
+    <button id="sorteia">Sortear jogadora</button>
+  </div>
+  <div class="galeria" id="galeria"></div>
+</section>
+
+<dialog id="modal" aria-labelledby="m-nome">
+  <button class="fechar" id="fechar" aria-label="Fechar">✕</button>
+  <div id="m-corpo"></div>
+</dialog>
+
+<section id="clubes" class="bloco">
+  <h2>Clubes e competições</h2>
+  <div class="grade">
+    <div class="cartao"><h3>Brasileirão Feminino</h3><p>A principal competição nacional. A Série A1 existe desde 2013 e hoje reúne clubes de grande torcida.</p></div>
+    <div class="cartao"><h3>Libertadores Feminina</h3><p>Disputada por campeãs de toda a América do Sul. Clubes brasileiros, como o Corinthians, já foram campeões.</p></div>
+    <div class="cartao"><h3>Copa do Mundo Feminina</h3><p>A maior competição de seleções. Em 2027, pela primeira vez, ela será disputada no Brasil.</p></div>
+    <div class="cartao"><h3>Olimpíadas</h3><p>O futebol feminino entrou nos Jogos em 1996. O Brasil já conquistou três pratas: 2004, 2008 e 2024.</p></div>
+  </div>
+</section>
+
+<section id="base" class="bloco rosa">
+  <h2>Futebol feminino de base</h2>
+  <p class="intro">Toda craque começou numa categoria de base. É ali que as meninas aprendem os fundamentos, criam o gosto pelo jogo e descobrem até onde podem chegar. Clique em uma categoria.</p>
+  <div class="filtros" id="cats"></div>
+  <article class="evento" id="cat-info" aria-live="polite"></article>
+  <p class="nota">As idades e os campeonatos de cada categoria podem variar entre clubes e federações. Consulte a federação do seu estado.</p>
+</section>
+
+<section id="curiosidades" class="bloco">
+  <h2>Conquistas e curiosidades</h2>
+  <div class="grade recordes">
+    <div class="cartao"><h3>6 Bolas de Ouro FIFA</h3><p>Marta foi eleita a melhor do mundo seis vezes.</p></div>
+    <div class="cartao"><h3>91.553 pessoas</h3><p>Público recorde no Camp Nou para Barcelona x Wolfsburg, em 2022.</p></div>
+    <div class="cartao"><h3>7 Copas do Mundo</h3><p>Formiga disputou todas as Copas entre 1995 e 2019.</p></div>
+    <div class="cartao"><h3>Copa 2027 no Brasil</h3><p>Primeira Copa Feminina na América do Sul.</p></div>
+  </div>
+  <div class="curio">
+    <p id="curio-txt">Clique no botão para descobrir um fato.</p>
+    <button class="botao" id="curio-btn">Você sabia?</button>
+  </div>
+</section>
+
+<section id="quiz" class="bloco escuro">
+  <h2>Quiz interativo</h2>
+  <div class="quiz" id="quiz-box"></div>
+</section>
+
+<section id="incentivo" class="bloco rosa centro">
+  <h2>Lugar de menina é onde ela quiser</h2>
+  <p class="frase" id="frase">Jogar bola é para todas.</p>
+  <button class="botao preto" id="frase-btn">Outra mensagem</button>
+</section>
+</main>
+
+<footer>
+  <p><b>FUTEBOL DELAS</b> – Trabalho de Conclusão de Curso</p>
+  <p>Site informativo para valorização e divulgação do futebol feminino. Desenvolvido com HTML, CSS e JavaScript.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
