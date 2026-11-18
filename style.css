@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+:root{--pink:#f52b83;--pink-dark:#c91562;--black:#101014;--dark:#19191f;--white:#fff;--muted:#bcbcc5}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:Montserrat,Arial,sans-serif;background:var(--black);color:var(--white);line-height:1.7}
+.topo{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:16px 5%;background:rgba(16,16,20,.97);border-bottom:1px solid #303039}
+.logo{color:#fff;text-decoration:none;font-weight:900;letter-spacing:1px;font-size:1.25rem;white-space:nowrap}.logo span{color:var(--pink)}
+nav{display:flex;gap:14px;flex-wrap:wrap}nav a{color:#eee;text-decoration:none;font-size:.75rem;font-weight:700}nav a:hover{color:var(--pink)}
+.menu-toggle{display:none;background:none;border:0;color:#fff;font-size:1.7rem;cursor:pointer}
+.hero{min-height:570px;display:flex;align-items:center;padding:80px 10%;background:linear-gradient(90deg,rgba(10,10,14,.97),rgba(10,10,14,.75),rgba(10,10,14,.3)),url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-content{max-width:680px}.tag,.eyebrow{color:var(--pink);font-weight:900;letter-spacing:2px;font-size:.75rem}
+h1{font-size:clamp(3rem,7vw,5.6rem);line-height:1.04;margin:15px 0 20px;font-weight:900}h1 span{color:var(--pink)}
+.hero-content>p:not(.tag){max-width:570px;color:#e4e4e9;margin-bottom:28px}
+.btn{display:inline-block;border:0;border-radius:8px;background:var(--pink);color:#fff;padding:12px 20px;font-weight:800;text-decoration:none;cursor:pointer;transition:.2s}.btn:hover{background:var(--pink-dark);transform:translateY(-2px)}
+.btn-outline{background:transparent;border:1px solid var(--pink);margin-top:18px}
+.section{padding:78px 8%}.section h2{font-size:clamp(2rem,4vw,3rem);margin:7px 0 18px;line-height:1.2}
+.intro{text-align:center;max-width:1050px;margin:auto}.intro>p:last-child{max-width:790px;color:var(--muted);margin:auto}
+.section-lead{max-width:800px;color:var(--muted)}
+.historia,.selecao,.competicoes,.base{background:#19191f}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:15px;margin-top:32px}.timeline article{border-top:3px solid var(--pink);background:#24242c;padding:19px;border-radius:0 0 10px 10px}.timeline span{color:var(--pink);font-weight:900;font-size:1.45rem}.timeline p{color:#d0d0d8;margin-top:7px;font-size:.87rem}
+.player-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:32px}
+.player-card{display:flex;gap:16px;align-items:stretch;background:#1d1d24;border:1px solid #303039;border-radius:13px;padding:17px;overflow:hidden}
+.player-photo,.photo-placeholder{flex:0 0 150px;width:150px;min-height:210px;object-fit:cover;border-radius:9px;background:#282832}
+.photo-placeholder{display:grid;place-items:center;background:linear-gradient(135deg,var(--pink),#76214c);font-size:3rem;font-weight:900}
+.player-info h3{font-size:1.35rem;margin:2px 0 7px}.player-info p{color:#d0d0d8;font-size:.87rem}.player-info small{display:block;color:#ff8fbd;font-size:.76rem;margin-top:8px}.country{color:var(--pink);font-size:.65rem;font-weight:900;letter-spacing:1.5px}.photo-credit{display:inline-block;color:#f8a7cc;font-size:.75rem;margin-top:10px}.photo-note,.note{margin-top:16px;color:#9b9ba5;font-size:.78rem}
+.split{display:grid;grid-template-columns:1.3fr 1fr;gap:25px;margin-top:20px}.split p{color:#ddd;margin-bottom:12px}.highlight{background:#25252d;border-left:4px solid var(--pink);padding:22px;border-radius:9px}.highlight strong{color:#ff91bd}.highlight ul{padding-left:20px;margin-top:9px;color:#ddd}
+.cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}.cards-grid article{background:#24242c;border:1px solid #303039;border-radius:12px;padding:22px}.emoji{font-size:2rem}.cards-grid h3{margin:8px 0}.cards-grid p{color:#d0d0d8;font-size:.88rem}
+.club-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}.club-grid span{background:#24242c;border:1px solid #34343c;padding:17px;text-align:center;border-radius:9px;font-weight:800}
+.category-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:30px}.category-grid article{background:#25252d;border-radius:10px;padding:20px}.category-grid strong{color:var(--pink);font-size:1.3rem}.category-grid p{color:#d0d0d8;font-size:.82rem;margin-top:8px}
+.fact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:30px}.fact-grid article{background:#202027;border:1px solid #363640;border-radius:12px;padding:24px}.fact-grid strong{color:var(--pink);font-size:1.7rem}.fact-grid p{color:#ddd;margin-top:7px;font-size:.88rem}
+.acompanhe{text-align:center;background:linear-gradient(135deg,#21141c,#19191f)}.acompanhe p{max-width:800px;margin:0 auto;color:#ddd}
+footer{text-align:center;padding:38px 15px;background:#0a0a0d;border-top:1px solid #303039}footer p{color:#d0d0d8;margin:8px 0}footer small{color:#888894}
+@media(max-width:1100px){nav{gap:9px}nav a{font-size:.68rem}.timeline{grid-template-columns:repeat(3,1fr)}.cards-grid,.fact-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.topo{padding:14px 6%}.menu-toggle{display:block}nav{display:none;position:absolute;top:62px;left:0;right:0;padding:18px 6%;background:#15151a;flex-direction:column;gap:12px}nav.open{display:flex}nav a{font-size:.9rem}.hero{min-height:490px;padding:60px 7%}.section{padding:60px 7%}.timeline,.player-grid,.split{grid-template-columns:1fr}.cards-grid,.fact-grid{grid-template-columns:1fr 1fr}.club-grid{grid-template-columns:repeat(2,1fr)}.category-grid{grid-template-columns:repeat(2,1fr)}.player-card{gap:12px}.player-photo,.photo-placeholder{flex-basis:115px;width:115px;min-height:175px}}
+@media(max-width:430px){.player-card{display:block}.player-photo,.photo-placeholder{width:100%;height:230px;min-height:0;margin-bottom:12px}.cards-grid,.fact-grid,.category-grid,.club-grid{grid-template-columns:1fr}.section h2{font-size:2rem}}
