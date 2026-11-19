@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Futebol Delas — A força também entra em campo</title>
+<meta name="description" content="Portal informativo sobre futebol feminino: história, desigualdade, jogadoras, conquistas e curiosidades.">
+<meta name="theme-color" content="#090909">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Futebol Delas">
+<meta property="og:description" content="A força também entra em campo.">
+<meta property="og:locale" content="pt_BR">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+<header class="hd">
+<a class="logo" href="#home">FUTEBOL <span>DELAS</span></a>
+<nav id="nav" aria-label="Principal"><a href="#sobre">Sobre</a><a href="#historia">História</a><a href="#desigualdade">Desigualdade</a><a href="#jogadoras">Jogadoras</a><a href="#conquistas">Conquistas</a><a href="#curiosidades">Curiosidades</a><a href="#glossario">Glossário</a><a href="#quiz">Quiz</a></nav>
+<button class="ib" id="mb" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button>
+<button class="ib" id="th" aria-label="Alternar tema claro e escuro">◐</button>
+</header>
+<main id="main">
+<section id="home" class="w hero">
+<div>
+<h1>A força também entra em campo.</h1>
+<p>O futebol feminino tem talento, história, conquistas e milhões de torcedoras e torcedores. O Futebol Delas é um portal informativo para conhecer, valorizar e dar visibilidade a quem faz esse esporte acontecer.</p>
+<a class="btn" href="#jogadoras">Conheça as jogadoras</a>
+</div>
+<svg id="bl" viewBox="0 0 300 300" role="img" aria-label="Ilustração de uma bola de futebol rosa"></svg>
+</section>
+
+<section id="sobre" class="w sec rv" aria-labelledby="h-sobre">
+<h2 id="h-sobre">Sobre o Futebol Delas</h2>
+<p>Espaço informativo dedicado ao futebol feminino: sua trajetória, atletas importantes e os obstáculos que as mulheres ainda enfrentam para ter o mesmo reconhecimento que os homens no esporte.</p>
+<ul class="grid">
+<li><h3>Dar visibilidade</h3>Histórias de atletas que inspiram meninas e mulheres a jogar e ocupar espaços no esporte.</li>
+<li><h3>Informar</h3>Regras, competições, história, clubes e seleções reunidos em um só lugar.</li>
+<li><h3>Promover respeito</h3>Debate sobre igualdade de oportunidades, investimento, mídia e valorização profissional.</li>
+</ul>
+</section>
+
+<section id="historia" class="w sec rv" aria-labelledby="h-hist">
+<h2 id="h-hist">A história do futebol feminino</h2>
+<p>Mulheres jogam futebol há muitas décadas. Em vários países, elas enfrentaram preconceito, proibições e falta de apoio para continuar no esporte. Escolha um marco:</p>
+<div class="row" id="tl" role="tablist" aria-label="Marcos da linha do tempo"></div>
+<div class="pn" id="tld" role="tabpanel" aria-live="polite"></div>
+</section>
+
+<section id="desigualdade" class="w sec rv" aria-labelledby="h-des">
+<h2 id="h-des">Por que o futebol feminino ainda é desvalorizado?</h2>
+<p>Apesar do crescimento da modalidade, a desigualdade persiste. Não é falta de talento: é falta de oportunidade e investimento.</p>
+<div class="grid">
+<div class="card"><h3>Menos investimento</h3>Equipes femininas costumam receber menos recursos para treino, viagens, equipamentos e formação de base.</div>
+<div class="card"><h3>Diferença salarial</h3>A remuneração pode variar muito entre atletas homens e mulheres, conforme país, liga e clube.</div>
+<div class="card"><h3>Pouca cobertura da mídia</h3>Por muito tempo, jogos e conquistas femininas tiveram menos espaço em transmissões, jornais e publicidade.</div>
+<div class="card"><h3>Preconceito e estereótipos</h3>Comentários machistas e a ideia de que futebol é "coisa de homem" ainda afastam meninas dos campos.</div>
+<div class="card"><h3>Estrutura e oportunidades</h3>Nem toda região tem campeonatos de base, campos adequados e caminhos para a profissionalização.</div>
+<div class="card"><h3>Reconhecimento tardio</h3>Muitas atletas precisam de resultados extraordinários para receber a atenção que deveria ser cotidiana.</div>
+</div>
+<p class="note"><strong>Uma reflexão:</strong> quando meninas têm acesso a campos, treinadoras, campeonatos e incentivo, o talento aparece. Valorizar o futebol feminino é oferecer condições justas para todas as pessoas praticarem esporte.</p>
+</section>
+
+<section id="jogadoras" class="w sec rv" aria-labelledby="h-jog">
+<h2 id="h-jog">Grandes nomes do futebol feminino</h2>
+<p>Atletas reconhecidas internacionalmente. As posições são as mais associadas às carreiras delas; uma jogadora pode atuar em mais de uma, conforme a tática.</p>
+<div class="row" id="pf" role="group" aria-label="Filtrar por país"></div>
+<div class="grid" id="pg"></div>
+</section>
+
+<section id="conquistas" class="w sec rv" aria-labelledby="h-con">
+<h2 id="h-con">Conquistas e competições importantes</h2>
+<div class="grid">
+<div class="card"><h3>Copa do Mundo Feminina</h3>Principal torneio entre seleções, organizado pela FIFA. A 1ª edição foi em 1991; em 2023 passou a ter 32 seleções.</div>
+<div class="card"><h3>Jogos Olímpicos</h3>O futebol feminino entrou no programa olímpico em Atlanta 1996.</div>
+<div class="card"><h3>Campeonato Brasileiro</h3>Competição nacional de clubes organizada pela CBF, que fortalece equipes e revela talentos.</div>
+<div class="card"><h3>Copa América Feminina</h3>Torneio de seleções sul-americanas organizado pela CONMEBOL.</div>
+<div class="card"><h3>UEFA Women's Champions League</h3>Competição europeia de clubes que reúne algumas das equipes mais fortes do continente.</div>
+<div class="card"><h3>Estaduais e base</h3>Competições regionais e de formação ampliam o acesso e criam oportunidades para novas gerações.</div>
+</div>
+<ul class="stats">
+<li><b>1991</b>1ª Copa do Mundo Feminina</li>
+<li><b>32</b>Seleções na Copa de 2023</li>
+<li><b>17</b>Gols de Marta em Mundiais</li>
+<li><b>7</b>Copas disputadas por Formiga</li>
+</ul>
+</section>
+
+<section id="curiosidades" class="w sec rv" aria-labelledby="h-cur">
+<h2 id="h-cur">Curiosidades</h2>
+<details><summary>Quando aconteceu a primeira Copa do Mundo Feminina?</summary><p>Em 1991, na China. Os Estados Unidos foram campeões.</p></details>
+<details><summary>Quem é a maior artilheira da Copa do Mundo Feminina?</summary><p>Marta, do Brasil, com 17 gols em seis edições.</p></details>
+<details><summary>Por que Formiga é tão importante?</summary><p>Ela disputou sete edições da Copa do Mundo Feminina, entre 1995 e 2019, um recorde.</p></details>
+<details><summary>O futebol feminino tem as mesmas regras básicas?</summary><p>Sim: dois tempos, gols, impedimento, faltas e cartões. Só os regulamentos de cada competição podem mudar.</p></details>
+<details><summary>O que pode ajudar a modalidade a crescer?</summary><p>Investimento, formação de base, calendário estável, transmissão dos jogos, patrocínio, estrutura profissional e oportunidades iguais.</p></details>
+<details><summary>Por que falar de futebol feminino nas escolas?</summary><p>Porque a escola combate estereótipos e mostra que talento e interesse não dependem de gênero.</p></details>
+<p class="note"><strong>O futebol é de todas!</strong> Meninas podem sonhar em ser jogadoras, treinadoras, árbitras e jornalistas esportivas, ocupando todos os espaços do esporte.</p>
+</section>
+
+<section id="glossario" class="w sec rv" aria-labelledby="h-gl">
+<h2 id="h-gl">Glossário do futebol</h2>
+<label for="gs">Pesquisar termo</label><br><input id="gs" type="search" placeholder="Ex.: impedimento">
+<div class="grid" id="gl"></div>
+</section>
+
+<section id="quiz" class="w sec rv" aria-labelledby="h-quiz">
+<h2 id="h-quiz">Quiz: teste o que você aprendeu</h2>
+<div class="pn" id="qz"></div>
+</section>
+
+<section id="fontes" class="w sec rv" aria-labelledby="h-fn">
+<h2 id="h-fn">Fontes e referências</h2>
+<p>Confira as informações e atualize-as conforme novas competições. Registre a data de acesso de cada fonte e use o formato exigido pela sua instituição (ABNT).</p>
+<ul>
+<li><a href="https://www.fifa.com/pt/tournaments/womens/womensworldcup" rel="noopener" target="_blank">FIFA: Copa do Mundo Feminina</a></li>
+<li><a href="https://www.cbf.com.br/" rel="noopener" target="_blank">CBF: Confederação Brasileira de Futebol</a></li>
+<li><a href="https://www.conmebol.com/" rel="noopener" target="_blank">CONMEBOL: Copa América Feminina</a></li>
+<li><a href="https://olympics.com/" rel="noopener" target="_blank">Comitê Olímpico Internacional</a></li>
+<li><a href="https://www.uefa.com/womenschampionsleague/" rel="noopener" target="_blank">UEFA Women's Champions League</a></li>
+</ul>
+</section>
+</main>
+<footer><div class="w">© <span id="yr"></span> Futebol Delas. Projeto acadêmico informativo.</div></footer>
+<button class="btn" id="top" aria-label="Voltar ao topo">↑</button>
+<script src="js/script.js"></script>
+</body>
+</html>
