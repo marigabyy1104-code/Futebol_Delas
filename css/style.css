@@ -1,53 +1,302 @@
-:root{--bg:#090909;--p:#141414;--p2:#1c1c1c;--pk:#ff3f9b;--pk2:#ff78b8;--tx:#f7f4f6;--mu:#b9b2b7;--ln:#30252c;--on:#12070d}
-[data-theme=light]{--bg:#fff7fb;--p:#fff;--p2:#ffe9f3;--pk:#d6196f;--pk2:#b0125a;--tx:#1d1017;--mu:#5d4953;--ln:#f0cfe0;--on:#fff}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--tx);line-height:1.7}
-a{color:inherit;text-decoration:none}
-:focus-visible{outline:3px solid var(--pk2);outline-offset:2px}
-.skip{position:absolute;left:-999px;top:8px;background:var(--pk);color:var(--on);padding:8px 14px;border-radius:6px;z-index:50}
-.skip:focus{left:8px}
-.w{width:min(1120px,92%);margin:auto}
-.hd{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:0 4%;min-height:70px;background:var(--bg);border-bottom:1px solid var(--ln)}
-.logo{font-weight:900;font-size:1.3rem;letter-spacing:1px;margin-right:auto}.logo span{color:var(--pk)}
-nav{display:flex;gap:16px;flex-wrap:wrap}nav a{font-size:.88rem;color:var(--mu)}nav a:hover{color:var(--pk)}
-.ib{background:none;color:var(--tx);border:1px solid var(--pk);border-radius:8px;padding:7px 12px;cursor:pointer;font-size:1rem}
-#mb{display:none}
-.hero{min-height:540px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding:70px 0}
-h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1.05;margin-bottom:18px}
-.hero p{color:var(--mu);font-size:1.1rem;max-width:620px}
-#bl{width:100%;max-width:340px;justify-self:center}
-.btn{display:inline-block;margin-top:26px;padding:12px 22px;border-radius:7px;font-weight:bold;background:var(--pk);color:var(--on);border:0;cursor:pointer;font-size:1rem}
-.btn:hover{filter:brightness(1.12)}
-#top{position:fixed;right:18px;bottom:18px;margin:0;border-radius:50%;padding:10px 14px}
-.sec{padding:64px 0;border-top:1px solid var(--ln)}
-h2{font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.15;margin-bottom:14px}
-h3{font-size:1.1rem;margin:6px 0}
-p{color:var(--mu);max-width:75ch;margin-bottom:12px}
-.grid,.two{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;list-style:none;margin-top:20px}
-.card,.grid>li{background:var(--p);border:1px solid var(--ln);border-radius:12px;padding:20px;color:var(--mu);font-size:.95rem}
-.card h3,.grid>li h3{color:var(--tx)}
-.row{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
-.tab{background:var(--p);color:var(--tx);border:1px solid var(--ln);border-radius:20px;padding:7px 16px;cursor:pointer;font-size:.9rem}
-.tab[aria-selected=true]{background:var(--pk);color:var(--on);border-color:var(--pk)}
-.pn{background:var(--p);border-left:4px solid var(--pk);border-radius:0 10px 10px 0;padding:20px;color:var(--mu)}
-.pn strong{color:var(--pk2)}
-.note{border-left:4px solid var(--pk);background:var(--p2);padding:18px;border-radius:0 10px 10px 0;margin-top:22px;max-width:none}
-.note strong{color:var(--pk)}
-.pos{display:inline-block;background:var(--p2);color:var(--pk2);border-radius:20px;padding:2px 10px;font-size:.78rem;margin:4px 0}
-.ct{color:var(--pk2);font-size:.82rem;font-weight:bold}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:26px;list-style:none}
-.stats li{background:var(--p);border:1px solid var(--ln);border-radius:10px;padding:18px;text-align:center;color:var(--mu);font-size:.9rem}
-.stats b{display:block;font-size:1.9rem;color:var(--pk)}
-details{background:var(--p);border:1px solid var(--ln);border-radius:9px;padding:14px 18px;margin:10px 0}
-summary{cursor:pointer;font-weight:bold}details p{padding-top:10px;margin:0}
-input[type=search]{width:min(420px,100%);padding:10px 14px;margin-top:8px;border-radius:8px;border:1px solid var(--ln);background:var(--p);color:var(--tx);font-size:1rem}
-.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 14px;background:var(--p2);color:var(--tx);border:1px solid var(--ln);border-radius:8px;cursor:pointer;font-size:.95rem}
-.opt.ok{border-color:#2ecc71;background:#10301d;color:#eafff1}.opt.no{border-color:#ff5a5a;background:#3a1414;color:#fff0f0}
-[data-theme=light] .opt.ok{background:#d9f7e4;color:#0b3d1f}[data-theme=light] .opt.no{background:#ffdede;color:#5a0d0d}
-ul{padding-left:0;list-style:none}li a{color:var(--pk2);text-decoration:underline}
-footer{border-top:1px solid var(--ln);padding:28px 0;text-align:center;color:var(--mu);font-size:.88rem}
-.rv{opacity:0;transform:translateY(16px);transition:opacity .5s,transform .5s}.rv.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-@media(max-width:850px){.grid,.two{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}}
-@media(max-width:720px){#mb{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);padding:16px 5%;flex-direction:column;border-bottom:1px solid var(--ln)}nav.open{display:flex}.grid,.two{grid-template-columns:1fr}}
+:root {
+  /* Cores do tema escuro, usado inicialmente pelo site. */
+  --bg: #090909;
+  --p: #141414;
+  --p2: #1c1c1c;
+  --pk: #ff3f9b;
+  --pk2: #ff78b8;
+  --tx: #f7f4f6;
+  --mu: #b9b2b7;
+  --ln: #30252c;
+  --on: #12070d;
+}
+
+/* Substitui as cores quando o tema claro está ativo. */
+[data-theme="light"] {
+  --bg: #fff7fb;
+  --p: #fff;
+  --p2: #ffe9f3;
+  --pk: #d6196f;
+  --pk2: #b0125a;
+  --tx: #1d1017;
+  --mu: #5d4953;
+  --ln: #f0cfe0;
+  --on: #fff;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+
+/* Inclui bordas e espaçamentos internos no cálculo do tamanho dos elementos. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Suaviza a rolagem e reserva espaço para o cabeçalho fixo. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+/* Define a fonte, o fundo e a cor padrão da página. */
+body {
+  background: var(--bg);
+  color: var(--tx);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+/* Remove o sublinhado e herda a cor do texto nos links. */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Mostra um contorno ao redor do elemento selecionado pelo teclado. */
+:focus-visible {
+  outline: 3px solid var(--pk2);
+  outline-offset: 2px;
+}
+
+/* Esconde o link de pular conteúdo até que ele receba foco. */
+.skip {
+  position: absolute;
+  top: 8px;
+  left: -999px;
+  z-index: 50;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: var(--pk);
+  color: var(--on);
+}
+
+/* Exibe o link de acessibilidade quando selecionado pelo teclado. */
+.skip:focus {
+  left: 8px;
+}
+
+/* Centraliza o conteúdo e limita sua largura em telas grandes. */
+.w {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+/* CABEÇALHO E NAVEGAÇÃO */
+
+/* Mantém o cabeçalho no topo e organiza seu conteúdo em linha. */
+.hd {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 70px;
+  padding: 0 4%;
+  border-bottom: 1px solid var(--ln);
+  background: var(--bg);
+}
+
+/* Estiliza o logotipo e usa a margem automática para afastá-lo dos botões. */
+.logo {
+  margin-right: auto;
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+/* Realça uma parte do logotipo com a cor de destaque. */
+.logo span {
+  color: var(--pk);
+}
+
+/* Organiza os links de navegação horizontalmente. */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Define a aparência padrão dos links do menu. */
+nav a {
+  color: var(--mu);
+  font-size: 0.88rem;
+}
+
+/* Muda a cor do link quando o ponteiro passa sobre ele. */
+nav a:hover {
+  color: var(--pk);
+}
+
+/* Estiliza os botões do cabeçalho. */
+.ib {
+  padding: 7px 12px;
+  border: 1px solid var(--pk);
+  border-radius: 8px;
+  background: none;
+  color: var(--tx);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* O botão de menu móvel começa escondido em telas grandes. */
+#mb {
+  display: none;
+}
+
+/* CONTEÚDO E SEÇÕES */
+
+/* Organiza a abertura em duas colunas. */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 30px;
+  min-height: 540px;
+  padding: 70px 0;
+}
+
+/* Usa clamp para o título se adaptar ao tamanho da tela. */
+h1 {
+  margin-bottom: 18px;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 1.05;
+}
+
+/* Estiliza o texto de apresentação da abertura. */
+.hero p {
+  max-width: 620px;
+  color: var(--mu);
+  font-size: 1.1rem;
+}
+
+/* Ajusta a largura da ilustração e a centraliza na coluna. */
+#bl {
+  justify-self: center;
+  width: 100%;
+  max-width: 340px;
+}
+
+/* Aparência compartilhada por links e botões principais. */
+.btn {
+  display: inline-block;
+  margin-top: 26px;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--pk);
+  color: var(--on);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Clareia o botão quando o ponteiro passa sobre ele. */
+.btn:hover {
+  filter: brightness(1.12);
+}
+
+/* Fixa o botão de voltar ao topo no canto inferior direito. */
+#top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 50%;
+}
+
+/* Adiciona espaço e uma linha de separação em cada seção. */
+.sec {
+  padding: 64px 0;
+  border-top: 1px solid var(--ln);
+}
+
+/* Ajusta os tamanhos dos títulos; clamp adapta o tamanho à tela. */
+h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  line-height: 1.15;
+}
+
+h3 {
+  margin: 6px 0;
+  font-size: 1.1rem;
+}
+
+/* Controla a distância dos parágrafos e limita o comprimento das linhas. */
+p {
+  max-width: 75ch;
+  margin-bottom: 12px;
+  color: var(--mu);
+}
+
+/* CARDS, LISTAS, ABAS E PAINÉIS */
+
+/* Cria uma grade de três colunas para cards e listas. */
+.grid,
+.two {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+  list-style: none;
+}
+
+/* Compartilha estilo de cartão entre cards e itens de lista. */
+.card,
+.grid > li {
+  padding: 20px;
+  border: 1px solid var(--ln);
+  border-radius: 12px;
+  background: var(--p);
+  color: var(--mu);
+  font-size: 0.95rem;
+}
+
+/* Destaca o título dentro de cada cartão. */
+.card h3,
+.grid > li h3 {
+  color: var(--tx);
+}
+
+/* Organiza botões de abas, permitindo que quebrem de linha. */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+/* Estilo dos botões de abas. */
+.tab {
+  padding: 7px 16px;
+  border: 1px solid var(--ln);
+  border-radius: 20px;
+  background: var(--p);
+  color: var(--tx);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Destaca a aba selecionada por seu atributo de acessibilidade. */
+.tab[aria-selected="true"] {
+  border-color: var(--pk);
+  background: var(--pk);
+  color: var(--on);
+}
+
+/* Estiliza os painéis de conteúdo com uma faixa lateral colorida. */
+.pn {
+  padding: 20px;
+  border-left: 4px solid var(--pk);
+  border-radius: 0 10px 10px 0;
+  background: var(--p);
+  color: var(--mu);
+}
+
+/* Destaca o texto em negrito dentro dos painéis. */
+.pn strong {
+  color: var(--pk2);
+}
