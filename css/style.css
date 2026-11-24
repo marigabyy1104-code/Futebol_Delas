@@ -129,7 +129,7 @@ nav a:hover {
   color: var(--pk);
 }
 
-/* Estiliza os botões do cabeçalho. */
+/* Estiliza os botões do cabeçalho (tema e menu). */
 .ib {
   padding: 7px 12px;
   border: 1px solid var(--pk);
@@ -143,6 +143,30 @@ nav a:hover {
 /* O botão de menu móvel começa escondido em telas grandes. */
 #mb {
   display: none;
+}
+
+/* Em telas menores, mostra o botão e transforma o menu em lista vertical. */
+@media (max-width: 900px) {
+  #mb {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    padding: 16px 4%;
+    border-bottom: 1px solid var(--ln);
+    background: var(--bg);
+  }
+
+  /* A classe open, controlada pelo JavaScript, exibe o menu móvel. */
+  nav.open {
+    display: flex;
+  }
 }
 
 /* CONTEÚDO E SEÇÕES */
@@ -171,11 +195,19 @@ h1 {
   font-size: 1.1rem;
 }
 
-/* Ajusta a largura da ilustração e a centraliza na coluna. */
+/* Ajusta a largura da bola em SVG e a centraliza na coluna. */
 #bl {
   justify-self: center;
   width: 100%;
   max-width: 340px;
+}
+
+/* Em telas menores, coloca o texto e a bola um abaixo do outro. */
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
 }
 
 /* Aparência compartilhada por links e botões principais. */
@@ -261,7 +293,25 @@ p {
   color: var(--tx);
 }
 
-/* Organiza botões de abas, permitindo que quebrem de linha. */
+/* Mostra o país da jogadora em cor de destaque. */
+.ct {
+  color: var(--pk2);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+/* Estiliza a etiqueta com a posição da jogadora. */
+.pos {
+  display: inline-block;
+  margin: 6px 0 10px;
+  padding: 2px 10px;
+  border: 1px solid var(--pk);
+  border-radius: 20px;
+  color: var(--pk2);
+  font-size: 0.8rem;
+}
+
+/* Organiza botões de abas e filtros, permitindo que quebrem de linha. */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -269,7 +319,7 @@ p {
   margin: 16px 0;
 }
 
-/* Estilo dos botões de abas. */
+/* Estilo dos botões de abas e filtros. */
 .tab {
   padding: 7px 16px;
   border: 1px solid var(--ln);
@@ -299,4 +349,95 @@ p {
 /* Destaca o texto em negrito dentro dos painéis. */
 .pn strong {
   color: var(--pk2);
+}
+
+/* Em telas médias, usa duas colunas; no celular, uma só. */
+@media (max-width: 900px) {
+  .grid,
+  .two {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid,
+  .two {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* GLOSSÁRIO E QUIZ */
+
+/* Estiliza o campo de busca do glossário. */
+input {
+  width: 100%;
+  max-width: 420px;
+  padding: 10px 14px;
+  border: 1px solid var(--ln);
+  border-radius: 10px;
+  background: var(--p);
+  color: var(--tx);
+  font-size: 1rem;
+}
+
+/* Faz cada alternativa do quiz ocupar a largura do painel. */
+.opt {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  border: 1px solid var(--ln);
+  border-radius: 10px;
+  background: var(--p2);
+  color: var(--tx);
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: left;
+}
+
+/* Aplica cores para indicar resposta correta ou incorreta. */
+.opt.ok {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.2);
+}
+
+.opt.no {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.2);
+}
+
+/* RODAPÉ */
+
+/* Define espaçamento, borda e cor do rodapé. */
+footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--ln);
+  color: var(--mu);
+  font-size: 0.9rem;
+}
+
+/* ANIMAÇÕES */
+
+/* As seções começam transparentes e aparecem aos poucos ao rolar a página. */
+.rv {
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+/* A classe in, adicionada pelo JavaScript, revela a seção. */
+.rv.in {
+  opacity: 1;
+}
+
+/* Respeita a preferência do visitante por menos movimento. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  /* Mantém as seções visíveis e remove a transição. */
+  .rv {
+    opacity: 1;
+    transition: none;
+  }
 }
